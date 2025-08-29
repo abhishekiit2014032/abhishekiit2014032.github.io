@@ -1,324 +1,218 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Abhishek Rajgure | Senior Data & ML Engineer</title>
-    <meta name="description" content="Portfolio of Abhishek Rajgure, a Senior Data and Machine Learning Engineer with over 6 years of experience in data pipelines, MLOps, and conversational AI.">
-    <meta name="author" content="Abhishek Rajgure">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/vendor.css">
-    <script src="js/modernizr.js"></script>
-    <script src="js/pace.min.js"></script>
-    <link rel="icon" type="image/png" href="favicon.png">
-</head>
-<body id="top">
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import { 
+  User, 
+  MapPin, 
+  Mail, 
+  Phone, 
+  Linkedin, 
+  Github, 
+  Download,
+  Briefcase,
+  GraduationCap,
+  Star
+} from "lucide-react";
 
-    <header>
-        <div class="row">
-            <a class="menu-toggle" href="#"><span>Menu</span></a>
-            <nav id="main-nav-wrap">
-                <ul class="main-navigation">
-                    <li class="current"><a class="smoothscroll" href="#intro" title="">Home</a></li>
-                    <li><a class="smoothscroll" href="#about" title="">About</a></li>
-                    <li><a class="smoothscroll" href="#resume" title="">Experience</a></li>
-                    <li><a class="smoothscroll" href="#portfolio" title="">Projects</a></li>
-                    <li><a class="smoothscroll" href="#contact" title="">Contact</a></li>
-                </ul>
-            </nav>
+const Index = () => {
+  return (
+    <div className="min-h-screen bg-background">
+      {/* Header/Navigation */}
+      <header className="border-b bg-card/50 backdrop-blur-sm sticky top-0 z-50">
+        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+          <div className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+              <span className="text-primary-foreground font-bold text-sm">AR</span>
+            </div>
+            <span className="font-semibold text-lg">Abhishek Rajgure</span>
+          </div>
+          <nav className="hidden md:flex space-x-6">
+            <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">About</a>
+            <a href="#experience" className="text-muted-foreground hover:text-foreground transition-colors">Experience</a>
+            <a href="#skills" className="text-muted-foreground hover:text-foreground transition-colors">Skills</a>
+            <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact</a>
+          </nav>
+          <Button>
+            <Download className="w-4 h-4 mr-2" />
+            Resume
+          </Button>
         </div>
-    </header>
+      </header>
 
-    <section id="intro">
-        <div class="intro-overlay"></div>
-        <div class="intro-content">
-            <div class="row">
-                <div class="col-twelve">
-                    <h5>Hello, I'm a Senior Data & ML Engineer.</h5>
-                    <h1>I'm Abhishek Rajgure.</h1>
-                    <p class="intro-position">
-                        <span>Director | Neural Vault</span>
-                        <span>B.Tech (IT) | IIIT Allahabad Alumnus</span>
-                    </p>
-                    <a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
-                </div>
+      {/* Hero Section */}
+      <section className="container mx-auto px-4 py-16 lg:py-24">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6">
+            <div className="space-y-2">
+              <Badge variant="secondary" className="mb-4">
+                <Star className="w-3 h-3 mr-1" />
+                Available for Opportunities
+              </Badge>
+              <h1 className="text-4xl lg:text-6xl font-bold tracking-tight">
+                Hello, I'm
+                <span className="block text-primary">Abhishek Rajgure</span>
+              </h1>
+              <p className="text-xl text-muted-foreground">
+                Founder | CEO | Gen AI | Lead Backend Developer
+              </p>
             </div>
+            <p className="text-lg text-muted-foreground max-w-lg">
+              GenAI and backend engineer with 8 years of experience building scalable, distributed systems. 
+              I specialize in conversational agents integrating retrieval-augmented generation (RAG) pipelines for intelligent search and voice and text support.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button size="lg" className="w-full sm:w-auto">
+                <Mail className="w-4 h-4 mr-2" />
+                Get In Touch
+              </Button>
+              <Button variant="outline" size="lg" className="w-full sm:w-auto">
+                <Linkedin className="w-4 h-4 mr-2" />
+                LinkedIn Profile
+              </Button>
+            </div>
+          </div>
+          <div className="relative">
+            <div className="w-full max-w-md mx-auto">
+              <Card className="border-2 border-primary/20 shadow-2xl">
+                <CardContent className="p-8">
+                  <div className="w-48 h-48 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full mx-auto mb-6 flex items-center justify-center">
+                    <User className="w-24 h-24 text-primary" />
+                  </div>
+                  <div className="text-center space-y-2">
+                    <h3 className="text-xl font-semibold">Professional Profile</h3>
+                    <div className="flex items-center justify-center text-muted-foreground">
+                      <MapPin className="w-4 h-4 mr-1" />
+                      <span>IIIT Allahabad Graduate</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
         </div>
-        <ul class="intro-social">
-            <li><a href="https://www.linkedin.com/in/abhishek-rajguru-655b4910b/"><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="https://github.com/abhishekiit2014032"><i class="fa fa-github"></i></a></li>
-            <li><a href="https://www.facebook.com/abhishek.rajguru"><i class="fa fa-facebook"></i></a></li>
-        </ul>
-    </section>
+      </section>
 
-    <section id="about">
-        <div class="row section-intro">
-            <div class="col-twelve">
-                <h5>About Me</h5>
-                <h1>Let me introduce myself.</h1>
-                <div class="intro-info">
-                    <p>I'm a **Senior Data and Machine Learning Engineer** with over six years of experience designing, building, and deploying large-scale data pipelines and ML-powered features. My expertise includes **Retrieval-Augmented Generation (RAG)**, embeddings, and reinforcement learning, with a strong background in developing robust systems for recommendation, search, and conversational AI[cite: 6, 7].</p>
-                </div>
-            </div>
+      {/* About Section */}
+      <section id="about" className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">About Me</h2>
+            <p className="text-lg text-muted-foreground">
+              A dedicated professional with a passion for excellence and continuous learning
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card>
+              <CardContent className="p-6 text-center">
+                <Briefcase className="w-12 h-12 text-primary mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-2">8+ Years Experience</h3>
+                <p className="text-muted-foreground">
+                  Led teams at D.E. Shaw, founded NeuralVault, and delivered scalable AI solutions
+                </p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="p-6 text-center">
+                <GraduationCap className="w-12 h-12 text-primary mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-2">B.Tech (IT)</h3>
+                <p className="text-muted-foreground">
+                  IIIT Allahabad (2014-2018) • CGPA: 8.75 • Google Summer of Code 2018
+                </p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="p-6 text-center">
+                <Star className="w-12 h-12 text-primary mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-2">Excellence</h3>
+                <p className="text-muted-foreground">
+                  Committed to delivering exceptional results and exceeding expectations
+                </p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
-        <div class="row about-content">
-            <div class="col-six tab-full">
-                <h3>Experience & Skills</h3>
-                <p>I am proficient in Python, Spark, Kafka, and AWS. I have a proven track record of delivering solutions from the ground up and collaborating with stakeholders to turn requirements into technical solutions[cite: 6, 7, 19].</p>
-                <ul class="info-list">
-                    <li>
-                        <strong>Fullname:</strong>
-                        <span>Abhishek Sanjay Rajgure</span>
-                    </li>
-                    <li>
-                        <strong>Website:</strong>
-                        <span>https://abhishekiit2014032.github.io</span>
-                    </li>
-                    <li>
-                        <strong>Email:</strong>
-                        <span>abhi.rajgure@gmail.com</span>
-                    </li>
-                    <li>
-                        <strong>Contact:</strong>
-                        <span>(+91) 8308124551</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-six tab-full">
-                <h3>Technical Skills</h3>
-                <ul class="skill-list">
-                    <li>**ML/AI:** Python, TensorFlow, PyTorch, Scikit-learn, Embeddings, RAG, Reinforcement Learning, Fine-Tuning, LLMs [cite: 25]</li>
-                    <li>**Data Engineering:** Apache Spark, Apache Kafka, Airflow, SQL, Iceberg [cite: 26]</li>
-                    <li>**Cloud/DevOps:** AWS (EMR, S3, EKS), Kubernetes, Docker, CI/CD, Jenkins [cite: 26]</li>
-                    <li>**Databases:** PostgreSQL, DynamoDB, Elasticsearch, Vector Databases [cite: 27]</li>
-                    <li>**Programming Languages:** Python, Java, SQL, C++, JavaScript, Perl [cite: 27]</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row button-section">
-            <div class="col-twelve">
-                <a href="Abhishek_Rajgure_Resume.pdf" title="Download Resume" class="button button-primary">Download Resume (PDF)</a>
-            </div>
-        </div>
-    </section>
+      </section>
 
-    <section id="resume" class="grey-section">
-        <div class="row section-intro">
-            <div class="col-twelve">
-                <h5>Experience & Education</h5>
-                <h1>My Professional Journey.</h1>
-            </div>
+      {/* Skills Section */}
+      <section id="skills" className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Skills & Expertise</h2>
+            <p className="text-lg text-muted-foreground">
+              Core competencies and technical skills
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              "Python & Java",
+              "GenAI & RAG Pipelines",
+              "AWS & Kubernetes",
+              "Microservices Architecture",
+              "Apache Kafka & Spark",
+              "Docker & CI/CD",
+              "PostgreSQL & Vector DBs",
+              "Machine Learning",
+              "Data Engineering",
+              "Leadership & Team Management",
+              "HFT & Trading Systems",
+              "Conversational AI"
+            ].map((skill, index) => (
+              <Card key={index} className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-4">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span className="font-medium">{skill}</span>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
-        <div class="row resume-timeline">
-            <div class="col-twelve resume-header">
-                <h2>Work Experience</h2>
-            </div>
-            <div class="col-twelve">
-                <div class="timeline-wrap">
-                    <div class="timeline-block">
-                        <div class="timeline-ico"><i class="fa fa-briefcase"></i></div>
-                        <div class="timeline-header">
-                            <h3>Director | Neural Vault</h3>
-                            <p>Apr 2025 - Present</p>
-                        </div>
-                        <div class="timeline-content">
-                            <h4>Chhatrapati Sambhajinagar, Maharashtra, India (Hybrid) [cite: 10]</h4>
-                            <p>Architected and deployed scalable AI solutions, including voice-based multilingual conversational agents using RAG and fine-tuned embedding models[cite: 11]. Led development of an ML-driven matrimonial application and engineered data pipelines for government projects, ensuring high availability[cite: 12, 13].</p>
-                        </div>
-                    </div>
-                    <div class="timeline-block">
-                        <div class="timeline-ico"><i class="fa fa-briefcase"></i></div>
-                        <div class="timeline-header">
-                            <h3>Senior Software Engineer | Arcesium (D. E. Shaw)</h3>
-                            <p>Feb 2019 - Mar 2025 [cite: 15]</p>
-                        </div>
-                        <div class="timeline-content">
-                            <p>Engineered large-scale batch and streaming data pipelines with Python, Java, and SQL for a mission-critical trade restrictions monitoring application[cite: 16]. Delivered an automation project that reduced manual effort by 90% and owned the product lifecycle, improving data quality and system reliability[cite: 17, 18].</p>
-                        </div>
-                    </div>
-                    <div class="timeline-block">
-                        <div class="timeline-ico"><i class="fa fa-briefcase"></i></div>
-                        <div class="timeline-header">
-                            <h3>Software Developer | SAP Labs</h3>
-                            <p>June 2018 - Jan 2019 [cite: 21]</p>
-                        </div>
-                        <div class="timeline-content">
-                            <p>Developed cloud-native applications on the SAP Leonardo platform, focusing on IoT and predictive analytics[cite: 22]. Gained production experience with cloud technologies and built data-intensive features using Python, JavaScript, and HanaDB[cite: 23].</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row resume-timeline">
-            <div class="col-twelve resume-header">
-                <h2>Education</h2>
-            </div>
-            <div class="col-twelve">
-                <div class="timeline-wrap">
-                    <div class="timeline-block">
-                        <div class="timeline-ico"><i class="fa fa-briefcase"></i></div>
-                        <div class="timeline-header">
-                            <h3>B.Tech (Information Technology)</h3>
-                            <p>2014 - 2018 [cite: 33]</p>
-                        </div>
-                        <div class="timeline-content">
-                            <h4>Indian Institute of Information Technology Allahabad</h4>
-                            <p>CGPA 8.75/10 [cite: 33]</p>
-                        </div>
-                    </div>
-                    <div class="timeline-block">
-                        <div class="timeline-ico"><i class="fa fa-briefcase"></i></div>
-                        <div class="timeline-header">
-                            <h3>XIIth</h3>
-                            <p>2012-2013 [cite: 33]</p>
-                        </div>
-                        <div class="timeline-content">
-                            <h4>Maharashtra State Board</h4>
-                            <p>Percentage 77.76% [cite: 33]</p>
-                        </div>
-                    </div>
-                    <div class="timeline-block">
-                        <div class="timeline-ico"><i class="fa fa-briefcase"></i></div>
-                        <div class="timeline-header">
-                            <h3>Xth</h3>
-                            <p>2010-2011 [cite: 33]</p>
-                        </div>
-                        <div class="timeline-content">
-                            <h4>Maharashtra State Board</h4>
-                            <p>Percentage 92.36% [cite: 33]</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      </section>
 
-    <section id="portfolio">
-        <div class="row section-intro">
-            <div class="col-twelve">
-                <h5>Projects</h5>
-                <h1>Check Out Some of My Works.</h1>
-                <p class="lead">Here are some of my key projects, showcasing my skills in machine learning and data engineering.</p>
+      {/* Contact Section */}
+      <section id="contact" className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Get In Touch</h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              Let's connect and discuss opportunities for collaboration
+            </p>
+            <div className="grid sm:grid-cols-2 gap-4 mb-8">
+              <Card>
+                <CardContent className="p-6 text-center">
+                  <Mail className="w-8 h-8 text-primary mx-auto mb-3" />
+                  <h3 className="font-semibold mb-1">Email</h3>
+                  <p className="text-muted-foreground">abhi.rajgure@gmail.com</p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="p-6 text-center">
+                  <Linkedin className="w-8 h-8 text-primary mx-auto mb-3" />
+                  <h3 className="font-semibold mb-1">LinkedIn</h3>
+                  <p className="text-muted-foreground">Connect on LinkedIn</p>
+                </CardContent>
+              </Card>
             </div>
+            <Button size="lg" className="w-full sm:w-auto">
+              <Mail className="w-4 h-4 mr-2" />
+              Send Message
+            </Button>
+          </div>
         </div>
-        <div class="row portfolio-content">
-            <div class="col-twelve">
-                <div id="folio-wrapper" class="block-1-2 block-mob-full stack">
-                    <div class="bgrid folio-item">
-                        <div class="item-wrap">
-                            <img src="images/portfolio/beetle.jpg" alt="Reinforcement Learning Project">
-                            <a href="#modal-01" class="overlay">
-                                <div class="folio-item-table">
-                                    <div class="folio-item-cell">
-                                        <h3 class="folio-title">Self-Driving 2D Car</h3>
-                                        <span class="folio-types">Reinforcement Learning</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="bgrid folio-item">
-                        <div class="item-wrap">
-                            <img src="images/portfolio/shutterbug.jpg" alt="Data Mining Project">
-                            <a href="#modal-02" class="overlay">
-                                <div class="folio-item-table">
-                                    <div class="folio-item-cell">
-                                        <h3 class="folio-title">Twitter Trend Detection</h3>
-                                        <span class="folio-types">Data Mining, Hierarchical Clustering</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="bgrid folio-item">
-                        <div class="item-wrap">
-                            <img src="images/portfolio/clouds.jpg" alt="Classification Project">
-                            <a href="#modal-03" class="overlay">
-                                <div class="folio-item-table">
-                                    <div class="folio-item-cell">
-                                        <h3 class="folio-title">Employee Retention Prediction</h3>
-                                        <span class="folio-types">Machine Learning, Classification Models</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+      </section>
 
-                    <div id="modal-01" class="popup-modal slider mfp-hide">
-                        <div class="media">
-                            <img src="images/portfolio/modals/m-beetle.jpg" alt="" />
-                        </div>
-                        <div class="description-box">
-                            <h4>Self-Driving 2D Car</h4>
-                            <p>Developed a 2D simulation where a car used Q-learning to navigate and avoid obstacles[cite: 29]. This project demonstrates the practical application of reinforcement learning principles.</p>
-                            <div class="categories">Reinforcement Learning</div>
-                        </div>
-                    </div>
-                    <div id="modal-02" class="popup-modal slider mfp-hide">
-                        <div class="media">
-                            <img src="images/portfolio/modals/m-shutterbug.jpg" alt="" />
-                        </div>
-                        <div class="description-box">
-                            <h4>Twitter Trend Detection</h4>
-                            <p>Built a system to identify real-time trends from streaming Twitter data using hierarchical clustering algorithms to group related topics[cite: 30].</p>
-                            <div class="categories">Data Mining, Hierarchical Clustering</div>
-                        </div>
-                    </div>
-                    <div id="modal-03" class="popup-modal slider mfp-hide">
-                        <div class="media">
-                            <img src="images/portfolio/modals/m-clouds.jpg" alt="" />
-                        </div>
-                        <div class="description-box">
-                            <h4>Employee Retention Prediction</h4>
-                            <p>Utilized machine learning libraries in Python to predict employee attrition based on HR survey data, providing actionable insights for retention strategies[cite: 31].</p>
-                            <div class="categories">Machine Learning, Classification Models</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      {/* Footer */}
+      <footer className="border-t py-8">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-muted-foreground">
+            © 2024 Abhishek Rajgure. All rights reserved.
+          </p>
         </div>
-    </section>
+      </footer>
+    </div>
+  );
+};
 
-    <section id="contact">
-        <div class="row section-intro">
-            <div class="col-twelve">
-                <h5>Contact</h5>
-                <h1>I'd Love To Hear From You.</h1>
-            </div>
-        </div>
-        <div class="row contact-info">
-            <div class="col-four tab-full">
-                <div class="icon"><i class="icon-mail"></i></div>
-                <h5>Email Me At</h5>
-                <p>abhi.rajgure@gmail.com</p>
-            </div>
-            <div class="col-four tab-full">
-                <div class="icon"><i class="icon-phone"></i></div>
-                <h5>Call Me At</h5>
-                <p>Mobile: (+91) 8308124551</p>
-            </div>
-            <div class="col-four tab-full">
-                <div class="icon"><i class="icon-pin"></i></div>
-                <h5>Where to find me</h5>
-                <p>Chhatrapati Sambhajinagar, Maharashtra, India</p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="row">
-            <div class="col-twelve">
-                <div class="go-top">
-                    <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-angle-up"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <div id="preloader"><div id="loader"></div></div>
-    <script src="js/jquery-2.1.3.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-</body>
-</html>
+export default Index;
